@@ -1,0 +1,68 @@
+import json
+import os
+
+CWD = os.path.dirname(__file__)
+
+def get_data(dataset):
+    with open(dataset, encoding='utf-8') as file:
+        return json.load(file)
+
+def qty_M30(dataset, zc_list):
+    return len([dea for dea in dataset if dea["direccion_codigo_postal"] in zc_list])
+
+def get_private(dataset):
+    return len([dea for dea in dataset if dea["tipo_titularidad"] == "Privada"])
+
+def menu_inicial():
+    print("--------------------")
+    print("MENU PRINCIPAL")
+    print("1. Usuarios")
+    print("2. DEAS")
+    print("E. Exit")
+
+def menu_usuarios():
+    print("--------------------")
+    print("MENU USUARIOS")
+    print("1. Crear Usuario")
+    print("2. Log in")
+    print("3. Cambiar Password")
+    print("V. Volver")
+
+def menu_dea():
+    print("--------------------")
+    print("MENU DEA")
+    print("1. Buscar DEA por codigo")
+    print("2. Buscar DEA por posicion")
+    print("3. Modificar DEA")
+    print("V. Volver")
+
+def menu_by_position():
+    x = input("X: ")
+    y = input("Y: ")
+    return [x, y]
+
+def rol_options(rol_list):
+    print("ROL USUARIO")
+    for i, rol in enumerate(rol_list):
+        print(f"{i+1}. {rol}")
+
+def read_json(json_file):
+    with open(f"{CWD}/{json_file}", encoding="utf8") as file:
+        return json.load(file)
+
+def create_user(users_names, json_file):
+    with open(f"{CWD}/{json_file}", "w", encoding="utf8") as file:
+        json.dump(users_names, file, ensure_ascii=False, indent=4)
+
+class DEA:
+    def __init__(self, x, y):
+        if type(x) != int:
+            raise ValueError("Solo se adminten numeros enteros")
+        if type(y) != int:
+            raise ValueError("Solo se adminten numeros enteros")
+        self.x = x
+        self.y = y
+    def distance(self, user_x, user_y):
+        c_1 = (user_x - self.x) ** 2
+        c_2 = (user_y - self.y) ** 2
+        return ((c_1 + c_2)**0.5)
