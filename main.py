@@ -38,14 +38,19 @@ while salir != True:
     if user.upper() == 'E': # Exit
         salir = True
 
-    elif user == '1':
+    elif user == '1':   # users (alta, log in, cambio password)
         while user.upper() != 'V':
             funcs.menu_usuarios()
             user = input("Opcion: ")
 
-    elif user == '2':
+    elif user == '2':   # buscar DEA
         while user.upper() != 'V':
             funcs.menu_dea()
             user = input("Opcion: ")
-
-#print(data["data"][0])
+            if user == '1':
+                print("--------------------")
+                print("Buscar DEA por codigo en construccion")
+            elif user == '2':
+                user_x, user_y = funcs.menu_by_position()
+                nearest = funcs.get_nearest(data["data"], user_x, user_y)
+                print(nearest)
