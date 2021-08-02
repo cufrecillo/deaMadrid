@@ -4,6 +4,7 @@ import os
 import funcs
 import datetime
 import bcrypt
+import auth
 
 # url = "https://datos.comunidad.madrid/catalogo/dataset/35609dd5-9430-4d2e-8198-3eeb277e5282/resource/c38446ec-ace1-4d22-942f-5cc4979d19ed/download/desfibriladores_externos_fuera_ambito_sanitario.json"
 CWD = os.path.dirname(__file__)
@@ -39,9 +40,7 @@ while salir != True:
         salir = True
 
     elif user == '1':   # users (alta, log in, cambio password)
-        while user.upper() != 'V':
-            funcs.menu_usuarios()
-            user = input("Opcion: ")
+        auth.auth()
 
     elif user == '2':   # buscar DEA
         while user.upper() != 'V':

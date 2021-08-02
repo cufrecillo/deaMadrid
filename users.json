@@ -1,0 +1,28 @@
+{
+    "data": [
+        {
+            "name": "admin",
+            "pwd": "$2b$12$Alq9xGGV8y6iRHaLhOSweu2FtiAqNj3Ssfr0eoYEI0r0RP6YCJO.m",
+            "rol": "admin",
+            "user_since": "2021-07-30"
+        },
+        {
+            "name": "test",
+            "pwd": "$2b$12$XeNbD7Yr3h1xTQ4f6EmsPOpTcw0xU6cLcuR3vb70IzF3yNeJfJOGW",
+            "rol": "agent",
+            "user_since": "2021-07-30"
+        },
+        {
+            "name": "prueba",
+            "pwd": "$2b$12$c8FHRMQ0zZVIr45l24yP2e4y3LVd7cEDL9sWYRtA4kaaWcjU5usRS",
+            "rol": "agent",
+            "user_since": "2021-07-30"
+        },
+        {
+            "name": "prueba2",
+            "pwd": "$2b$12$rtPf11nqdyUcW3qG5/E5OOGgZzfvCJ4.pvzu1I7SOSHWfVuv36rNu",
+            "rol": "agent",
+            "user_since": "2021-08-02"
+        }
+    ]
+}
