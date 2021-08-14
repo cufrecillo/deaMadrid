@@ -39,17 +39,25 @@ while salir != True:
     if user.upper() == 'E': # Exit
         salir = True
 
-    elif user == '1':   # users (alta, log in, cambio password)
+    elif user == '1':   # Menu users
         auth.auth()
 
-    elif user == '2':   # buscar DEA
+    elif user == '2':   # Menu DEA
         while user.upper() != 'V':
             funcs.menu_dea()
             user = input("Opcion: ")
-            if user == '1':
+            if user == '1': # DEA por codigo
                 print("--------------------")
                 print("Buscar DEA por codigo en construccion")
-            elif user == '2':
+                
+            elif user == '2':   # DEA por posicion
                 user_x, user_y = funcs.menu_by_position()
                 nearest = funcs.get_nearest(data["data"], user_x, user_y)
                 print(nearest)
+                
+            elif user == '3': # Modificar DEA
+                print("--------------------")
+                if auth.validation():
+                    print("Modificar DEA en construccion")
+
+

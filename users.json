@@ -8,9 +8,10 @@
         },
         {
             "name": "test",
-            "pwd": "$2b$12$XeNbD7Yr3h1xTQ4f6EmsPOpTcw0xU6cLcuR3vb70IzF3yNeJfJOGW",
+            "pwd": "$2b$12$9niMLZf1r7WrpOAm1UjqheYIDpnkPZiapSpKLX8EHGqtc5dmmmlSi",
             "rol": "agent",
-            "user_since": "2021-07-30"
+            "user_since": "2021-07-30",
+            "token": "$2b$12$D1XGv2vP8.CBDv/9lW.B7egRbQtLQPh2E5V0DT54ZR1TUkbnwUCve"
         },
         {
             "name": "prueba",
