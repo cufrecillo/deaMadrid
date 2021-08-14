@@ -20,10 +20,12 @@ https://datos.comunidad.madrid/catalogo/dataset/35609dd5-9430-4d2e-8198-3eeb277e
    - Acceder
    - Eliminar usuarios (solamente para el rol admin)
    - Salir
+
 2. Crear usuario:
    - Que permita crear un usuario con campos nombre, contraseña y fecha(encriptada)
    - Que sea guardado en otro JSON para USERS
    - Permitir cambio de contraseña a cualquier usuario.
+   
 3. Acceder:
    - Buscar DEA por código
    - Buscar DEA más cercano por posición

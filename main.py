@@ -31,7 +31,6 @@ rol_user = ["admin", "agent"]
 salir = False
 # contraseñas usadas "1234"
 
-
 while salir != True:
     funcs.menu_inicial()
     user = input("Opcion: ")
@@ -56,8 +55,9 @@ while salir != True:
                 print(nearest)
                 
             elif user == '3': # Modificar DEA
-                print("--------------------")
                 if auth.validation():
-                    print("Modificar DEA en construccion")
+                    print("--------------------")
+                    print("MENU MODIFICAR DEA")
+                    print("En construccion...")
 
 

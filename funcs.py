@@ -57,3 +57,4 @@ def get_nearest(dataset, user_x, user_y):
         distance = dea_object.distance(user_x, user_y)
         result[distance] = dea
     return sorted(result.items(), key= lambda  dea: dea[0])[:2]
+

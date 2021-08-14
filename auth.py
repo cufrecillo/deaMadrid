@@ -106,5 +106,5 @@ def validation():
         if (datetime.datetime.fromisoformat(user_token["expired_date"]) + datetime.timedelta(seconds=60)) > datetime.datetime.today():
             print("Date")
             if user_token["token"] == server_token:
-                print("Es el mismo token")
+                print("Es el mismo token...")
                 return user_token

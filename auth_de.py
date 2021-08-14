@@ -33,6 +33,5 @@ def create_user(users_names, json_file):
 def create_user_token(user_token, json_file):
     user_token["expired_date"] = user_token["expired_date"].isoformat()
     user_token["token"] = user_token["token"].decode()
-
     with open(f"{CWD}/{json_file}", "w", encoding="utf8") as file:
         json.dump({"user_session": user_token}, file, ensure_ascii=False, indent=4)
