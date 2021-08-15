@@ -44,8 +44,8 @@ def menu_dea():
 def menu_by_position():
     print("--------------------")
     print("---Busqueda DEA por position---")
-    x = int(input("X: "))
-    y = int(input("Y: "))
+    x = int(input("Latitud: "))
+    y = int(input("Longitud: "))
     return (x, y)
 
 def get_nearest(dataset, user_x, user_y):
@@ -56,5 +56,5 @@ def get_nearest(dataset, user_x, user_y):
         dea_object = DEA(int(dea[dea_x]), int(dea[dea_y]))
         distance = dea_object.distance(user_x, user_y)
         result[distance] = dea
-    return sorted(result.items(), key= lambda  dea: dea[0])[:2]
+    return sorted(result.items(), key= lambda  dea: dea[0])[0]
 
